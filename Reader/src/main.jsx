@@ -8,6 +8,7 @@ import Home from "./Pages/Home.jsx";
 import BookProfile from "./Pages/Book Profile.jsx";
 import Library from "./Pages/Library.jsx";
 import AuthorProfile from "./Pages/AuthorProfile.jsx";
+import Read from "./Pages/Read.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
   { path: "/bookprofile/:id", element: <BookProfile /> },
   { path: "/library/", element: <Library /> },
   { path: "/author/", element: <AuthorProfile />},
+  { path: "/bookprofile/:id/read", element: <Read /> },
 ]);
 
 createRoot(document.getElementById("root")).render(
