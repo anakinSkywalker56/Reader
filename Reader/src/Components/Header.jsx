@@ -22,7 +22,7 @@ const Header = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8081/profile/${id}`)
+      .get(`http://localhost:8081/profile/${userId}`)
       .then((res) => setUsers(res.data))
       .catch((err) => console.log("Axios err in volumes: ", err));
   }, []);

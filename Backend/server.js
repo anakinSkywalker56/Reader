@@ -115,6 +115,46 @@ app.get('/library/:id', (req, res) => {
     });
   });
 
+  app.post('/updateProfile', (req, res) => {
+    const sql = `
+        UPDATE profiles
+        SET profileImg = ?, profileBg = ?
+        WHERE id = ?
+    `;
+
+    const values = [
+        req.body.profileImg,
+        req.body.profileBg,
+        req.body.id   // primary key of the profile row
+    ];
+
+    db.query(sql, values, (err, result) => {
+        if (err) return res.json(err);
+        return res.json({ message: "Profile updated successfully!" });
+    });
+});
+
+app.post('/updateUser', (req, res) => {
+    const sql = `
+        UPDATE users
+        SET name = ?, username = ?, password = ?, description = ?
+        WHERE id = ?
+    `;
+
+    const values = [
+        req.body.name,
+        req.body.username,
+        req.body.password,
+        req.body.description,
+        req.body.id   // primary key of the profile row
+    ];
+
+    db.query(sql, values, (err, result) => {
+        if (err) return res.json(err);
+        return res.json({ message: "Profile updated successfully!" });
+    });
+});
+
 app.listen(8081, ()=> {
     console.log("Makima is Listening");
 })
