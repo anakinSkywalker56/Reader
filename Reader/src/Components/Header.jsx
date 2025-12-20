@@ -38,7 +38,11 @@ const Header = () => {
       <div className="flex items-center justify-between pr-10 pl-10 h-15 font-bold text-basefont text-3xl">
         <div onClick={() => navigate(`/home/${userId}`)}>Reader.</div>
         {/* Insert PFP Img here */}
-        <SmallPfp key={users.id} profileImg={users.profileImg} />
+        <SmallPfp
+          key={users.id}
+          profileImg={users.profileImg}
+          userId={userId}
+        />
       </div>
     </div>
   );

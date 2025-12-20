@@ -106,6 +106,15 @@ app.get('/profile/:userId', (req, res) => {
   });
 });
 
+app.get('/library/:id', (req, res) => {
+    const id_lib = req.params.id;
+    const sql = "SELECT * FROM users WHERE id = ?";
+    db.query(sql, [id_lib], (err, result) => {
+      if (err) return res.json(err);
+      res.json(result);
+    });
+  });
+
 app.listen(8081, ()=> {
     console.log("Makima is Listening");
 })

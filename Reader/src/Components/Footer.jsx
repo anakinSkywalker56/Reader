@@ -32,7 +32,14 @@ const Footer = () => {
           <div className="flex justify-center items-center h-8 w-20 rounded-full bg-amber-50/0 overflow-hidden">
             <img src="/assets/Library Icon.png" alt="" className="w-10 h-10" />
           </div>
-          <div className="text-basefont">Library</div>
+          <div
+            className="text-basefont"
+            onClick={() => {
+              navigate(`/library/${userId}`);
+            }}
+          >
+            Library
+          </div>
         </div>
       </div>
     </>

@@ -18,8 +18,8 @@ const router = createBrowserRouter([
   // dynamic URL
   { path: "/home/:id", element: <Home /> },
   { path: "/bookprofile/:id", element: <BookProfile /> },
-  { path: "/library/", element: <Library /> },
-  { path: "/author/", element: <AuthorProfile />},
+  { path: "/library/:id", element: <Library /> },
+  { path: "/author/", element: <AuthorProfile /> },
   { path: "/bookprofile/:id/read", element: <Read /> },
 ]);
 
