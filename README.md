@@ -1,5 +1,5 @@
-### Reader
-Book Recommender App
+# Reader
+### Book Recommender App
 
 
 
@@ -9,5 +9,5 @@ Injug, John Anakin A.
 Lusing, Andriane
 Paquibot, Alexandre
 
-This app is # MOBILE FIRST
+# This app is MOBILE FIRST
 it uses iPhone 14 resolution, please do this before preview
