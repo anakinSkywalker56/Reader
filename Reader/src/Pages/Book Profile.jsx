@@ -11,6 +11,7 @@ const BookProfile = () => {
   const { id } = useParams();
 
   const [volumes, setVolumes] = useState([]);
+  const [books, setBooks] = useState([]);
 
   useEffect(() => {
     axios
@@ -18,6 +19,17 @@ const BookProfile = () => {
       .then((res) => setVolumes(res.data))
       .catch((err) => console.log("Axios err in volumes: ", err));
   }, [id]);
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:8081/bookprofile/${id}`)
+      .then((res) => {
+        // const sorted = res.data.sort((a, b) => a.id - b.id);
+        console.log("DATA: ", res.data);
+        setBooks(res.data);
+      })
+      .catch((err) => console.log("AXIOS ERROR: ", err));
+  }, []);
 
   return (
     <div className="flex">
@@ -37,6 +49,7 @@ const BookProfile = () => {
                   key={volumes.id}
                   volNum={volumes.volNum}
                   volName={volumes.volName}
+                  volPic={books.imageLink}
                 />
               ))}
             </div>

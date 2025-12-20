@@ -46,26 +46,17 @@ const LoginCard = () => {
             className="bg-transparent h-12 w-80 border text-basefont border-stroke pl-5"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <div className="text-stroke text-md mt-2">Forgotten password?</div>
-          <button className="h-12 w-80 bg-stroke rounded-full text-basefont">
+          <button className="h-12 w-80 bg-stroke rounded-full text-basefont mt-2">
             Login
           </button>
         </form>
         <br />
-        <div className="flex flex-col gap-y-2">
-          <div className="text-basefont text-md mt-2 text-center">
-            continue with
-          </div>
 
-          <button className="h-12 w-80 bg-white rounded-full text-base">
-            Google
-          </button>
-          <button className="h-12 w-80 bg-white rounded-full text-base">
-            QR Code
-          </button>
-        </div>
         <div className="text-basefont text-md mt-2">
-          No account? <span className="text-stroke">Sign up</span>
+          No account{" "}
+          <span className="text-stroke" onClick={() => navigate(`register`)}>
+            Sign up
+          </span>
         </div>
 
         <div className="justify-center bottom-0 mt-20">

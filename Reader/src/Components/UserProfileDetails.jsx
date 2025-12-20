@@ -41,17 +41,32 @@ const UserProfileDetails = () => {
       <div className="bg-stroke/20 h-40 w-40 rounded-full   -mt-20 ml-5 flex justify-center overflow-hidden items-center">
         <img src={profile?.profileImg} alt="pfp" />
       </div>
-      <div
-        className="flex justify-end text-basefont text-sm pr-10"
-        onClick={() => {
-          navigate("/edit");
-        }}
-      >
-        <div className="h-7 w-22 rounded-xl bg-linear-to-t from-stroke/40 to-base/25 border border-stroke flex items-center justify-center">
-          Edit Profile
+      <div className="space-y-2 -mt-15">
+        <div
+          className="flex justify-end text-basefont text-sm pr-10"
+          onClick={() => {
+            navigate("/edit");
+          }}
+        >
+          {/* <div > */}
+          <div className="h-7 w-22 rounded-xl bg-linear-to-t from-stroke/40 to-base/25 border border-stroke flex items-center justify-center">
+            Edit Profile
+          </div>
+        </div>
+        <div
+          className="flex justify-end text-basefont text-sm pr-10"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          {/* <div > */}
+          <div className="h-7 w-22 rounded-xl bg-linear-to-t from-stroke/40 to-base/25 border border-stroke flex items-center justify-center">
+            Logout
+          </div>
         </div>
       </div>
-      <div className="w-100 h-50 -mt-7">
+
+      <div className="w-100 h-50">
         <div className="h-50 pl-12 pt-2">
           <div className="text-basefont text-3xl">{user.name}</div>
           <div className="text-basefont/50 text-xl">{user.username}</div>
