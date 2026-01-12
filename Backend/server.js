@@ -68,6 +68,17 @@ app.post("/register", (req, res) => {
   });
 });
 
+app.post("/addprofile", (req, res) => {
+  const { userId, profileImg, profileBg } = req.body;
+
+  const sql = `
+  INSERT INTO profiles (userId, profileImg, profileBg)
+  VALUES (?,?,?)
+  `;
+
+  const values = [userId, profileImg, profileBg];
+});
+
 app.get("/books", (rep, res) => {
   const sql = `
         SELECT

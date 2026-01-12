@@ -41,7 +41,7 @@ const Edit = () => {
     try {
       await axios.post("http://localhost:8081/updateUser", {
         id: userId,
-        name: user.name, // or add an input for name
+        name: name || user.name, // or add an input for name
         username: username || user.username, // fallback
         password: password || user.password, // fallback
         description: description || user.description, // fallback
