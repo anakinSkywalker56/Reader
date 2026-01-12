@@ -36,10 +36,10 @@ const UserProfileDetails = () => {
         </div>
       </div>
       <div className="w-relative h-50 bg-stroke/20 flex justify-center overflow-hidden items-center">
-        <img src={profile?.profileBg} alt="Bg" />
+        <img src={profile?.profileBg} alt="" />
       </div>
       <div className="bg-stroke/20 h-40 w-40 rounded-full   -mt-20 ml-5 flex justify-center overflow-hidden items-center">
-        <img src={profile?.profileImg} alt="pfp" />
+        <img src={profile?.profileImg} alt="" />
       </div>
       <div className="space-y-2 -mt-15">
         <div

@@ -9,7 +9,7 @@ const SmallPfp = ({ profileImg, userId }) => {
         navigate(`/library/${userId}`);
       }}
     >
-      <img src={profileImg} alt="Pfp" className="object-cover h-10 w-10" />
+      <img src={profileImg} alt="" className="object-cover h-10 w-10" />
     </div>
   );
 };
